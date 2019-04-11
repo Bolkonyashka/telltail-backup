@@ -1,0 +1,30 @@
+<article class="adventures-list">
+    {{#each adventures}}
+    <section class="adventure">
+        <div class="adventure__image">
+            <a href="/scene/{{ firstSceneId }}">
+                {{#if image }}
+                    <img src="{{ image }}">
+                {{^}}
+                    <img src="{{ defaultImage }}">
+                {{/if}}
+            </a>
+        </div>
+        <div class="adventure__info">
+            <div class="adventure__name">
+                <a href="/scene/{{ firstSceneId }}">{{ name }}</a>
+            </div>
+            <div class="adventure__description">
+                {{ description }}
+            </div>
+            <div class="adventure__tags">
+                {{#each tags}}
+                <a class="adventure__tag"href="/tag/{{ nameEn }}">
+                    #{{ nameRu }}
+                </a>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+    {{/each}}
+</article>

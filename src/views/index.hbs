@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="{{ meta.charset }}">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ meta.description }}">
+    <link rel="shortcut icon" href="{{ staticBasePath }}favicon.png" type="image/png">
+    <link rel="stylesheet" href="{{ staticBasePath }}index.css" media="screen">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gabriela" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__icon"></div>
+        <div class="header__label">
+            <a href="/"><span>Telltail</span>Games</a>
+        </div>
+    </header>
+    {{#if tagName}}
+        <div class="filter-tag-name">
+            #{{ tagName }}
+        </div>
+    {{/if}}
+    {{> adventures}}
+</body>
+
+</html>
